@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>City Weather</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<form>
+	Enter a city: <input id="cityQueried" type="text" value=""><br>
+	Suggestion: <span id="textHint">Empty</span>
+	<input id="suggestionButton" type="submit" value="Submit">
+</form>
+<p>City</p>
+<textarea id="displayCity">No City</textarea>
+<div id="weather">No Weather</div>
+<script>
+$("#suggestionButton").click(function(e) {
+  $("#displayCity").text($("#cityQueried").val());
+  var weatherUrl = "https://api.wunderground.com/api/8f80047f9480a1d0/geolookup/conditions/q/UT/";
+  weatherUrl += $("#cityQueried").val();
+  weatherUrl += ".json";
+  console.log(weatherUrl);
+  $.ajax({
+    url : weatherUrl,
+    dataType : "jsonp",
+    success : function(data) {
+	console.log(data);
+	var location = data['location']['city'];
+	var temperature = data['current_observation']['temperature_string'];
+	var currentWeather = data['current_observation']['weather'];
+	var everything = "<ul>";
+	everything += "<li>Location: " + location + "</li>";
+	everything += "<li>Temperature: " + temperature + "</li>";
+	everything += "<li>Current Weather: " + currentWeather + "</li>";	
+        $("#weather").html(everything);
+	}
+   });
+       
+  e.preventDefault();  
+});
+$("#cityQueried").keyup(function() {
+	var url;
+	url = "https://students.cs.byu.edu/~clement/CS360/ajax/getcity.cgi?q=";
+	url += $("#cityQueried").val();
+	$.getJSON(url, function(data) {
+ 	var everything;
+	everything = "<ul>";
+	$.each(data, function(i, item) {
+	   everything += "<li> " + data[i].city + "</li>";
+	  });
+	  everything += "</ul>";
+	  $("#textHint").html(everything);
+	  console.log("Got " + data);
+	  console.log("Got " + data[0]);
+	  console.log("Got " + data[0].city);
+	})
+	.done(function() { console.log("request succeeded!"); })
+	.fail(function(jqXHR, textStatus, errorThrown) {
+	    console.log("Failed " + textStatus);
+	    console.log("Incoming " + jqXHR.responseText);
+	})
+	.always(function() { console.log("always called"); })
+	.complete(function() { console.log("complete called");});
+});
+</script>
+</body>
+</html>

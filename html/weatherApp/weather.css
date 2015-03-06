@@ -1,0 +1,90 @@
+html
+{
+	height: 100%;
+}
+
+body
+{
+	height: 100%;
+}
+
+#banner
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	color: white;
+	text-align: center;
+	padding: 50px;
+	background-color: #0033FF;
+}
+
+#bannerMenu 
+{
+	font-family: impact, sans-serif;
+	position: relative;
+	height: 72px;
+	padding: 20px;
+	font-size: 18px;
+	color: #674;
+}
+
+#bannerMenu ul
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	list-style-type: none;
+}
+
+#bannerMenu ul li
+{
+	float: left;
+	position: relative;
+}
+
+#bannerMenu ul li a
+{
+	text-align: center;
+	border-right: 1px solid #e9e9e9;
+	border-left: 1px solid #e9e9e9;
+	padding: 25px;
+	display: block;
+	color: #674;
+}
+
+#localWeatherSearch, #weather
+{
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	padding: 50px;
+	text-align: center;
+}
+
+.table
+{
+	display: table;
+	margin: 0 auto;
+}
+
+#weekForecast, #currentConditions
+{
+	border: 1px solid black;
+	padding: 50px;
+	margin: 50px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+#footer
+{
+	margin-top: 50px;
+}

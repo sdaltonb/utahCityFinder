@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CS 360 Weather!</title>
+		<link rel="stylesheet" type="text/css" href="weather.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div id="banner">
+			<h1>Weather - CS 360 - Steven Barnett</h1>
+		</div>
+		<div id="bannerMenu">
+			<div class="table">
+				<ul>
+					<li><a href="ResumeFall2014.pdf">RESUME</a></li>
+					<li><a href="currentWeather.html">Current Weather</a></li>
+					<li><a href="weatherForecast.html">Weather Forecast</a>
+				</ul>
+			</div>
+		</div>
+		<div id="localWeatherSearch">
+			<form>
+				Utah City:
+				<input id="cityQueried" type="text" name="city">
+				State:
+				<input type="text" name="state">
+				Zip Code:
+				<input type="text" name="zipcode">
+				<input id="suggestionButton" type="submit" name="findweather" value="Find Local Weather">
+				<br>
+			</form>
+			<br>
+			Suggestions:
+			<span id="cityHint">No hints</span>
+		</div>
+		<div id="weather">
+			<p>City</p>
+			<textarea id="cityEntered">No city entered</textarea>
+			<div id="forecast">
+				No Weather
+			</div>
+		</div>
+		<div id="footer">
+			<img src="clouds.jpg" alt="cloudsImage" style="width: 100%"/>
+		</div>
+		<script>
+			$("#suggestionButton").click(function(e) {
+			   $("#cityEntered").text($("#cityQueried").val());
+			   var weatherUrl = "https://api.wunderground.com/api/8f80047f9480a1d0/geolookup/conditions/q/UT/";
+			   weatherUrl += $("#cityQueried").val();
+			   weatherUrl += ".json";
+			   console.log(weatherUrl);
+			   $.ajax({
+			      url : weatherUrl,
+			      dataType : "jsonp",
+			      success : function(data) {
+			         console.log(data);
+				 var location = data['location']['city'];
+				 var temperature = data['current_observation']['temperature_string'];
+				 var currentWeather = data['current_observation']['weather'];
+				 var everything = "<ul>";
+				 everything += "<li>Location: " + location + "</li>";
+				 everything += "<li>Temperature: " + temperature + "</li>";
+				 everything += "<li>Current Weather: " + currentWeather + "</li>";
+				 everything += "</ul>";
+				 $("#forecast").html(everything);
+			      }
+			  });
+			  e.preventDefault();
+			});
+		      
+		      $("#cityQueried").keyup(function() {
+			 var url;
+			 url = "https://students.cs.byu.edu/~clement/CS360/ajax/getcity.cgi?q=";
+			 url += $("#cityQueried").val();
+			 $.getJSON(url, function(data) {
+			     var everything;
+			     everything = "<ul>";
+			     $.each(data, function(i, item) {
+				everything += "<li> " + data[i].city + "</li>";
+			     });
+			     everything += "</ul>";
+			     $("#cityHint").html(everything);
+			})
+			 .done(function() { console.log("Request succeeded!"); })
+			 .fail(function(jqXHR, textStatus, errorThrown) {
+				console.log("Failed " + textStatus);
+				console.log("Incoming " + jqXHR.responseText);
+			 })
+			 .always(function() { console.log("Always called"); })
+			 .complete(function() { console.log("Complete called") });
+		      });
+		</script>		
+	</body>
+</html>
