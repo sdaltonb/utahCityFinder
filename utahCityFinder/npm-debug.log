@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.7.0
+3 info using node@v0.10.21
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/var/node/utahCityFinder',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/ec2-user/.npm/utahCityFinder.sdaltonb/0.0.1/package.tgz not in flight; packing
+9 verbose tar pack [ '/home/ec2-user/.npm/utahCityFinder.sdaltonb/0.0.1/package.tgz',
+9 verbose tar pack   '/var/node/utahCityFinder' ]
+10 verbose tarball /home/ec2-user/.npm/utahCityFinder.sdaltonb/0.0.1/package.tgz
+11 verbose folder /var/node/utahCityFinder
+12 info prepublish utahCityFinder.sdaltonb@0.0.1
+13 verbose addLocalTarball adding from inside cache /home/ec2-user/.npm/utahCityFinder.sdaltonb/0.0.1/package.tgz
+14 silly cache afterAdd utahCityFinder.sdaltonb@0.0.1
+15 verbose afterAdd /home/ec2-user/.npm/utahCityFinder.sdaltonb/0.0.1/package/package.json not in flight; writing
+16 verbose afterAdd /home/ec2-user/.npm/utahCityFinder.sdaltonb/0.0.1/package/package.json written
+17 silly publish { author: { name: 'Steven Barnett' },
+17 silly publish   name: 'utahCityFinder.sdaltonb',
+17 silly publish   version: '0.0.1',
+17 silly publish   description: 'Constructs a list of Utah cities with a certain prefix',
+17 silly publish   main: 'utahCityFinder.sdaltonb',
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'http://github.com/sdaltonb/utahCityFinder' },
+17 silly publish   readme: 'Instructions:\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   bugs: { url: 'https://github.com/sdaltonb/utahCityFinder/issues' },
+17 silly publish   homepage: 'https://github.com/sdaltonb/utahCityFinder',
+17 silly publish   _id: 'utahCityFinder.sdaltonb@0.0.1',
+17 silly publish   scripts: {},
+17 silly publish   _shasum: '83c1cc9384001be7d5a999f93760dd1196218e7b',
+17 silly publish   _from: '.' }
+18 silly mapToRegistry name utahCityFinder.sdaltonb
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/utahCityFinder.sdaltonb
+22 verbose publish registryBase https://registry.npmjs.org/
+23 silly publish uploading /home/ec2-user/.npm/utahCityFinder.sdaltonb/0.0.1/package.tgz
+24 verbose stack Error: Invalid name: "utahCityFinder.sdaltonb"
+24 verbose stack     at ensureValidName (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:322:15)
+24 verbose stack     at Object.module.exports.fixNameField (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:211:5)
+24 verbose stack     at CachingRegistryClient.publish (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:41:11)
+24 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:135:14
+24 verbose stack     at mapToRegistry (/usr/local/lib/node_modules/npm/lib/utils/map-to-registry.js:55:3)
+24 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:105:3)
+24 verbose stack     at Array.1 (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+24 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+24 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+24 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+25 verbose cwd /var/node/utahCityFinder
+26 error Linux 3.14.27-25.47.amzn1.x86_64
+27 error argv "node" "/usr/local/bin/npm" "publish"
+28 error node v0.10.21
+29 error npm  v2.7.0
+30 error Invalid name: "utahCityFinder.sdaltonb"
+31 error If you need help, you may report this error at:
+31 error     <https://github.com/npm/npm/issues>
+32 verbose exit [ 1, true ]
