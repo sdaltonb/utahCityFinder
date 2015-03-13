@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script>
+         $(document).ready(function() {
+            $("#button").click(function() {
+	       var myObj = {Name:$("#Name").val(), Comment:$("#Comment").val()};
+	       var jsonObj = JSON.stringify(myObj);
+	       $("#json").text(jsonObj);
+               
+	       var url = "http://52.10.85.168/comment";
+               $.post(url, jsonObj, function(data, textStatus) {
+  		  $("#successIndicator").append(textStatus);
+	       });
+	    });
+         });
+	 
+	 $(document).ready(function() {
+	    $("#submit").click(function() {
+	       var url = "http://52.10.85.168/comment";
+	       $.getJSON(url, function(data) {
+		  var everything;
+		  everything = "<ul>";
+		  $.each(data, function(i, item) {
+		     everything += "<li> Name: " + data[i].Name + " Comment: " + data[i].Comment;
+		  });
+		  everything += "</ul>";
+		  $("#currentComments").html(everything);
+
+	       });
+	    });
+	 });
+      </script>
+   </head>
+   <body>
+      <form id="commentForm" action="">
+         Name: <input type="text" id="Name" value=""><br>
+         Comment: <input type="text" id="Comment" value=""><br>
+      </form>
+
+      <button id="button">Submit Comments</button>
+      
+      <button id="submit">Show Comments</button>
+
+      <div id="json"></div>
+      <div id="successIndicator"></div><br>
+      <div>Current Comments:</div><br>
+      <div id="currentComments"></div>
+   </body>
+</html>
