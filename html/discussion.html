@@ -10,8 +10,15 @@
 	       $("#json").text(jsonObj);
                
 	       var url = "http://52.10.85.168/comment";
-               $.post(url, jsonObj, function(data, textStatus) {
-  		  $("#successIndicator").append(textStatus);
+               jQuery.ajax ({
+                  url: url,
+                  type: "POST",
+                  data: jsonObj,
+                  dataType: "json",
+                  contentType: "application/json; charset=utf-8",
+                  success: function() {
+                     $("#successIndicator").append("Success");
+                  }
 	       });
 	    });
          });
@@ -39,7 +46,7 @@
          Comment: <input type="text" id="Comment" value=""><br>
       </form>
 
-      <button id="button">Submit Comments</button>
+      <button id="button">Submit Comment</button>
       
       <button id="submit">Show Comments</button>
 
