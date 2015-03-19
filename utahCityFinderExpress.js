@@ -1,9 +1,14 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var http = require('http');
 var https = require('https');
 var fs = require('fs');
-var http = require('http');
+var https = require('https');
 var url = require('url');
+var basicAuth = require('basic-auth-connect');
+var auth = basicAuth(function(user, pass) {
+   return((user === 'cs360') && (pass === 'test'));
+});
 
 var ROOT_DIR = "html/";
 var MongoClient = require('mongodb').MongoClient;
@@ -34,50 +39,46 @@ app.get('/comment', function (req, res) {
             items.toArray(function(err, itemArr) {
                console.log("Document Array: ");
                console.log(itemArr);
-               res.writeHead(200);
-               res.end();
+ 	       res.json(itemArr);
+               res.status(200);
+ 	       res.end();
             });
          });
       });
    });
 });
 
-app.post('/comment', function (req, res) {
+app.post('/comment', auth, function (req, res) {
    console.log("IN POST COMMENT ROUTE");
-   console.log(req.body);
-   var jsonData = "";
-   req.on('data', function(chunk) {
-      console.log("GETTING DATA");
-      jsonData += chunk;
-   });
-   req.on('end', function() {
-      var reqObj = JSON.parse(jsonData);
-      console.log(reqObj);
-      console.log("Name: " + reqObj.Name);
-      console.log("Comment: " + reqObj.Comment);
+   console.log(req.user);
+   console.log(req.remoteUser);
+   var reqObj = JSON.parse(JSON.stringify(req.body));
+   console.log(reqObj);
+   console.log("Name: " + reqObj.Name);
+   console.log("Comment: " + reqObj.Comment);
       
-      MongoClient.connect("mongodb://localhost/weatherdb", function(err, db) {
-         if (err) {
-            throw err;
-         }
-         db.collection('comments').insert(reqObj, function(err, records) {
-            console.log("Record added as " + records[0]._id);
-         });
+   MongoClient.connect("mongodb://localhost/weatherdb", function(err, db) {
+      if (err) {
+         throw err;
+      }
+      db.collection('comments').insert(reqObj, function(err, records) {
+         console.log("Record added as " + records[0]._id);
       });
-      res.status(200);
-      res.end();
    });
+   res.json("");
+   res.status(200);
+   res.end();
 });
 
-app.get('/', function (request, response) {
-   response.send('Get Index');
+app.get('/', function (req, res) {
+   res.send('Get Index');
 });   
 
 app.use('/', express.static('./html', { maxAge: 60*60*1000 }));
 
-app.get('/getcity', function (request, response) {
+app.get('/getcity', function (req, res) {
    console.log("In getcity route");
-   var urlObj = url.parse(request.url, true);
+   var urlObj = url.parse(req.url, true);
    fs.readFile(ROOT_DIR + "cities.dat.txt", function (err, data) {
       if (err) {
          throw err;
@@ -95,6 +96,6 @@ app.get('/getcity', function (request, response) {
       }
       console.log(cityJson);
       console.log(JSON.stringify(cityJson));
-      response.send(cityJson);
+      res.send(cityJson);
    });
 });

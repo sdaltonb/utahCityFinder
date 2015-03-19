@@ -9,7 +9,7 @@
 	       var jsonObj = JSON.stringify(myObj);
 	       $("#json").text(jsonObj);
                
-	       var url = "http://52.10.85.168/comment";
+	       var url = "https://52.10.85.168/comment";
                jQuery.ajax ({
                   url: url,
                   type: "POST",
@@ -25,7 +25,7 @@
 	 
 	 $(document).ready(function() {
 	    $("#submit").click(function() {
-	       var url = "http://52.10.85.168/comment";
+	       var url = "https://52.10.85.168/comment";
 	       $.getJSON(url, function(data) {
 		  var everything;
 		  everything = "<ul>";
