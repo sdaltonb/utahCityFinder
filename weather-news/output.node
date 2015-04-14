@@ -1,0 +1,201 @@
+nohup: ignoring input
+
+> weather-news@0.0.0 start /var/node/weather-news
+> node ./bin/www
+
+[0mGET /phpinfo.php [33m404 [0m13.331 ms - 957[0m
+[0mGET / [32m200 [0m3.017 ms - 2035[0m
+[0mGET /javascripts/angularApp.js [32m200 [0m3.823 ms - 2700[0m
+[0mGET /posts [32m200 [0m10.988 ms - 458[0m
+[0mGET /favicon.ico [33m404 [0m1.890 ms - 957[0m
+[0mPUT /posts/5514f12c57d31f471ba51c98/upvote [32m200 [0m10.158 ms - 83[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m3.122 ms - 109[0m
+[0mPUT /posts/5514f12c57d31f471ba51c98/upvote [32m200 [0m8.137 ms - 83[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m2.695 ms - 109[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m2.258 ms - 110[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m2.399 ms - 110[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m2.881 ms - 110[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m2.677 ms - 110[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m2.590 ms - 110[0m
+[0mPUT /posts/5511efda6e1994757fadf988/upvote [32m200 [0m2.194 ms - 110[0m
+[0mGET / [36m304 [0m1.832 ms - -[0m
+[0mGET /javascripts/angularApp.js [36m304 [0m1.258 ms - -[0m
+[0mGET /posts [32m200 [0m3.549 ms - 459[0m
+[0mGET /posts/5511efda6e1994757fadf988 [32m200 [0m6.128 ms - 186[0m
+[0mPOST /posts/5511efda6e1994757fadf988/comments [32m200 [0m80.097 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m4.575 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m3.255 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/5514f5ba407320dd1b2f6c0d/upvote [32m200 [0m3.865 ms - 102[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m3.299 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m3.952 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m3.306 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m3.639 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m3.848 ms - 114[0m
+[0mPUT /posts/5511efda6e1994757fadf988/comments/551ac114e09583444ffce8d8/upvote [32m200 [0m3.398 ms - 114[0m
+[0mGET / [36m304 [0m1.459 ms - -[0m
+[0mGET /javascripts/angularApp.js [36m304 [0m0.767 ms - -[0m
+[0mGET / [36m304 [0m8.044 ms - -[0m
+[0mGET /javascripts/angularApp.js [36m304 [0m0.614 ms - -[0m
+[0mGET /posts [32m200 [0m2.321 ms - 486[0m
+[0mGET / [32m200 [0m0.914 ms - 2035[0m
+[0mGET / [32m200 [0m0.916 ms - 2035[0m
+[0mGET /favicon.ico [33m404 [0m1.020 ms - 957[0m
+[0mGET / [32m200 [0m1.140 ms - 2035[0m
+[0mHEAD / [32m200 [0m0.787 ms - 2035[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.407 ms - 957[0m
+[0mGET / [32m200 [0m1.759 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.778 ms - 957[0m
+[0mGET / [32m200 [0m1.277 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.049 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.059 ms - 957[0m
+[0mGET /manager/html [33m404 [0m2.204 ms - 957[0m
+[0mGET / [32m200 [0m1.199 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.087 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.882 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.982 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.539 ms - 957[0m
+[0mGET / [32m200 [0m0.875 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.576 ms - 957[0m
+[0mGET /manager/html [33m404 [0m3.305 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.016 ms - 957[0m
+[0mGET / [32m200 [0m1.369 ms - 2035[0m
+[0mGET / [32m200 [0m0.891 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.484 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.183 ms - 957[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.002 ms - 957[0m
+[0mGET / [32m200 [0m1.188 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.724 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.652 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.095 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.102 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.640 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.481 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.151 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.116 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.093 ms - 957[0m
+[0mGET /user/ [33m404 [0m0.976 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.149 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.872 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.132 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.143 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.491 ms - 957[0m
+[0mHEAD / [32m200 [0m1.060 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.758 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.146 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.061 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.685 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.088 ms - 957[0m
+[0mGET /user/ [33m404 [0m1.183 ms - 957[0m
+[0mGET /manager/html [33m404 [0m2.013 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.373 ms - 957[0m
+[0mGET / [32m200 [0m0.831 ms - 2035[0m
+[0mGET /favicon.ico [33m404 [0m0.953 ms - 957[0m
+[0mGET / [32m200 [0m0.801 ms - 2035[0m
+[0mGET /robots.txt [33m404 [0m2.150 ms - 957[0m
+[0mGET /manager/html [33m404 [0m2.131 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.129 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.063 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.013 ms - 957[0m
+[0mGET / [32m200 [0m0.816 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.042 ms - 957[0m
+[0mHEAD / [32m200 [0m0.844 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.123 ms - 957[0m
+[0mGET / [32m200 [0m1.399 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.085 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.073 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.143 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.059 ms - 957[0m
+[0mGET /manager/html [33m404 [0m1.113 ms - 957[0m
+[0mGET / [32m200 [0m0.886 ms - 2035[0m
+[0mGET /tmUnblock.cgi [33m404 [0m2.549 ms - 957[0m
+[0mGET / [32m200 [0m0.798 ms - 2035[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.113 ms - 957[0m
+[0mGET / [32m200 [0m0.796 ms - 2035[0m
+[0mGET / [32m200 [0m0.931 ms - 2035[0m
+[0mHEAD /login.action [33m404 [0m1.131 ms - 957[0m
+[0mHEAD /index.action [33m404 [0m1.617 ms - 957[0m
+[0mHEAD /struts2.action [33m404 [0m1.042 ms - 957[0m
+[0mHEAD /shop.action [33m404 [0m1.050 ms - 957[0m
+[0mHEAD /login.do [33m404 [0m1.080 ms - 957[0m
+[0mHEAD /user.action [33m404 [0m1.307 ms - 957[0m
+[0mHEAD /test.action [33m404 [0m2.558 ms - 957[0m
+[0mHEAD /root.action [33m404 [0m1.096 ms - 957[0m
+[0mHEAD /admin.action [33m404 [0m1.260 ms - 957[0m
+[0mHEAD /web.action [33m404 [0m1.131 ms - 957[0m
+[0mHEAD /wwroot.action [33m404 [0m1.103 ms - 957[0m
+[0mHEAD / [32m200 [0m0.870 ms - 2035[0m
+[0mGET / [32m200 [0m1.025 ms - 2035[0m
+[0mGET / [32m200 [0m0.824 ms - 2035[0m
+[0mGET /favicon.ico [33m404 [0m0.826 ms - 957[0m
+[0mHEAD / [32m200 [0m0.852 ms - 2035[0m
+[0mGET /muieblackcat [33m404 [0m1.908 ms - 957[0m
+[0mGET //phpMyAdmin/scripts/setup.php [33m404 [0m1.223 ms - 957[0m
+[0mGET //phpmyadmin/scripts/setup.php [33m404 [0m1.030 ms - 957[0m
+[0mGET //pma/scripts/setup.php [33m404 [0m0.939 ms - 957[0m
+[0mGET //myadmin/scripts/setup.php [33m404 [0m1.148 ms - 957[0m
+[0mGET //MyAdmin/scripts/setup.php [33m404 [0m1.259 ms - 957[0m
+[0mHEAD http://52.10.85.168:80/mysql/admin/ [33m404 [0m4.546 ms - 957[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.416 ms - 957[0m
+[0mGET / [32m200 [0m0.880 ms - 2035[0m
+[0mHEAD / [32m200 [0m1.195 ms - 2035[0m
+[0mGET / [32m- [0m- ms - -[0m
+[0mHEAD / [32m200 [0m0.859 ms - 2035[0m
+[0mGET / [32m200 [0m0.874 ms - 2035[0m
+[0mGET / [32m200 [0m0.960 ms - 2035[0m
+[0mGET / [32m200 [0m0.777 ms - 2035[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.051 ms - 957[0m
+[0mGET / [32m200 [0m0.893 ms - 2035[0m
+[0mGET / [32m200 [0m2.367 ms - 2035[0m
+[0mGET /favicon.ico [33m404 [0m1.070 ms - 957[0m
+[0mGET / [32m200 [0m0.956 ms - 2035[0m
+[0mGET / [32m200 [0m0.956 ms - 2035[0m
+[0mHEAD / [32m200 [0m0.881 ms - 2035[0m
+[0mGET / [32m200 [0m0.848 ms - 2035[0m
+[0mGET /robots.txt [33m404 [0m1.057 ms - 957[0m
+[0mGET /favicon.ico [33m404 [0m1.414 ms - 957[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.539 ms - 957[0m
+[0mGET / [32m200 [0m1.776 ms - 2035[0m
+[0mGET / [32m200 [0m0.850 ms - 2035[0m
+[0mGET /robots.txt [33m404 [0m1.004 ms - 957[0m
+[0mOPTIONS / [32m200 [0m0.977 ms - 8[0m
+[0mGET / [32m200 [0m0.903 ms - 2035[0m
+[0mGET /robots.txt [33m404 [0m1.412 ms - 957[0m
+[0mGET http://5.61.43.116/ [32m200 [0m0.782 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.026 ms - 957[0m
+[0mPOST /login.action [33m404 [0m223.705 ms - 957[0m
+[0mGET / [32m200 [0m2.801 ms - 2035[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.158 ms - 957[0m
+[0mGET / [32m200 [0m0.940 ms - 2035[0m
+[0mGET / [32m200 [0m1.102 ms - 2035[0m
+[0mGET /robots.txt [33m404 [0m1.396 ms - 957[0m
+[0mGET / [32m200 [0m0.850 ms - 2035[0m
+[0mHEAD / [32m200 [0m0.970 ms - 2035[0m
+[0mGET / [32m200 [0m0.935 ms - 2035[0m
+[0mGET /tmUnblock.cgi [33m404 [0m1.138 ms - 957[0m
+[0mGET / [32m200 [0m0.838 ms - 2035[0m
+[0mGET /rom-0 [33m404 [0m1.123 ms - 957[0m
+[0mGET / [32m200 [0m0.910 ms - 2035[0m
+[0mGET / [32m200 [0m0.968 ms - 2035[0m
+[0mGET /favicon.ico [33m404 [0m0.901 ms - 957[0m
+[0mGET / [32m200 [0m0.910 ms - 2035[0m
+[0mGET /manager/html [33m404 [0m1.118 ms - 957[0m
+
+npm ERR! Linux 3.14.27-25.47.amzn1.x86_64
+npm ERR! argv "node" "/usr/local/bin/npm" "start"
+npm ERR! node v0.10.21
+npm ERR! npm  v2.7.0
+npm ERR! code ELIFECYCLE
+npm ERR! weather-news@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 143
+npm ERR! 
+npm ERR! Failed at the weather-news@0.0.0 start script 'node ./bin/www'.
+npm ERR! This is most likely a problem with the weather-news package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get their info via:
+npm ERR!     npm owner ls weather-news
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /var/node/weather-news/npm-debug.log
